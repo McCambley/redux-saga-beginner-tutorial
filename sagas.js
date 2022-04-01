@@ -10,7 +10,7 @@ export function* helloSaga() {
 
 // Our worker Saga: will perform the async increment task
 export function* incrementAsync() {
-  yield delay(1000);
+  yield call(delay, 1000);
   yield put({ type: "INCREMENT" });
 }
 
