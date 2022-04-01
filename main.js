@@ -12,7 +12,10 @@ import { helloSaga } from "./sagas";
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(reducer, applyMiddleware(sagaMiddleware));
 
-sagaMiddleware.run(sagaMiddleware);
+sagaMiddleware.run(helloSaga);
+
+// Check it all out
+// console.log({ sagaMiddleware, store, state: store.getState() });
 
 const action = (type) => store.dispatch({ type });
 
